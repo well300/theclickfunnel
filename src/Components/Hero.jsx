@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import TextMaskAnimation from "./TextMaskAnimation";
 import Button from "../Reusable/Button.jsx";
 import { Shapes } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const labels = [
   { text: "Marketers", y: -30, color: "#0072F5" },
@@ -11,17 +12,27 @@ const labels = [
 ];
 
 const Hero = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % labels.length);
+    }, 2000); // Change selection every 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section className="relative w-full h-[82vh] flex flex-col items-center bg-[#131313] overflow-hidden px-2">
+    <section className="relative w-full h-[80vh] flex flex-col items-center bg-[#131313] overflow-hidden px-2">
       {/* Background Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:20px_30px] [mask-image:radial-gradient(ellipse_100%_60%_at_50%_0%,#FEFDFD_80%,transparent_140%)]"></div>
 
       {/* Content */}
       <div className="relative w-[90%] sm:w-[85%] md:w-[95%] max-w-8xl mx-auto flex flex-col gap-4 text-white z-10 mt-auto pb-8">
         
-        {/* Floating Labels - Hidden on mobile */}
+        {/* Floating Labels with Selection Cursor */}
         <motion.div 
-          className="hidden md:flex absolute top-23 right-1 flex-col gap-3"
+          className="hidden md:flex absolute top-34 right-1 flex-col gap-2"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -29,7 +40,7 @@ const Hero = () => {
           {labels.map((label, index) => (
             <motion.div
               key={index}
-              className="bg-white backdrop-blur-sm border border-white text-white text-sm font-medium px-4 py-1 rounded-lg shadow-lg flex items-center justify-center min-w-[140px]"
+              className="relative bg-white border border-gray-200 text-gray-800 text-xs font-medium px-3 py-1 rounded-md shadow-sm flex items-center justify-center min-w-[120px] h-7"
               initial={{ 
                 opacity: 0,
                 y: -20,
@@ -38,41 +49,36 @@ const Hero = () => {
               }}
               animate={{
                 opacity: 1,
-                y: [0, -8, 0],
-                scale: 1,
-                filter: "blur(0px)"
+                scale: activeIndex === index ? 1.05 : 1,
+                filter: "blur(0px)",
+                backgroundColor: activeIndex === index ? "#ffffff" : "#ffffff",
+                borderColor: activeIndex === index ? label.color : "#e5e7eb"
               }}
               transition={{
-                y: {
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: index * 0.2
-                },
-                opacity: {
-                  duration: 0.6,
-                  delay: index * 0.15
-                },
-                scale: {
-                  duration: 0.5,
-                  delay: index * 0.15
-                },
-                filter: {
-                  duration: 0.8,
-                  delay: index * 0.15
-                }
+                scale: { duration: 0.3 },
+                backgroundColor: { duration: 0.3 },
+                borderColor: { duration: 0.3 },
+                opacity: { duration: 0.6, delay: index * 0.15 },
+                filter: { duration: 0.8, delay: index * 0.15 }
               }}
-              style={{ color: label.color }}
+              style={{ color: activeIndex === index ? label.color : "#4b5563" }}
             >
               {label.text}
+              {/* Selection Cursor */}
+              {activeIndex === index && (
+                <motion.div
+                  className="absolute -left-2 w-1.5 h-1.5 bg-current rounded-full"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ type: "spring", stiffness: 500, damping: 20 }}
+                />
+              )}
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Animated Title */}
+        {/* Rest of your component remains unchanged */}
         <TextMaskAnimation />
-
-        {/* Button & Supporting Text */}
         <div className="flex flex-col md:flex-row md:items-center mt-2 justify-between gap-6">
           <Button
             to="/join"
