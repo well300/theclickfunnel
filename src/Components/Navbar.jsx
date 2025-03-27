@@ -61,7 +61,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
-            <div className="flex space-x-4">
+            <div className="flex space-x-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.id}

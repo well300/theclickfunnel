@@ -1,9 +1,13 @@
-import TextMaskAnimation from "./TextMaskAnimation"; // Import the animation component
+import TextMaskAnimation from "./TextMaskAnimation";
 import Button from "../Reusable/Button.jsx";
-import { Shapes, Figma, Brush, PenTool } from "lucide-react"; // Import design-related icons
-import InfiniteScrollText from "./InfiniteScrollText"; // Import the infinite scroll text component
-
+import { Shapes, Figma, Brush, PenTool } from "lucide-react";
 import { motion } from "framer-motion";
+
+const labels = [
+  { text: "Product Manager", x: -60, y: -30 },
+  { text: "UX Designer", x: 20, y: -50 },
+  { text: "Graphic Designer", x: 80, y: -20 },
+];
 
 const Hero = () => {
   return (
@@ -28,33 +32,37 @@ const Hero = () => {
           </span>
         </motion.div>
 
-{/* Floating Icons (Visible only on larger screens) */}
-<motion.div
-  className="hidden sm:flex absolute top-70 right-10 flex-row gap-6"
-  initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
-  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-  transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
->
-  <motion.div
-    animate={{ y: [0, -10, 0] }}
-    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-  >
-    <Figma size={48} className="text-white opacity-80" />
-  </motion.div>
-  <motion.div
-    animate={{ y: [0, -10, 0] }}
-    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: 0.2 }}
-  >
-    <Brush size={48} className="text-white opacity-80" />
-  </motion.div>
-  <motion.div
-    animate={{ y: [0, -10, 0] }}
-    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: 0.4 }}
-  >
-    <PenTool size={48} className="text-white opacity-80" />
-  </motion.div>
-</motion.div>
+        {/* Floating Icons with Labels */}
+        <motion.div
+          className="hidden sm:flex absolute top-70 right-10 flex-row gap-6"
+          initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
+        >
+          {[Figma, Brush, PenTool].map((Icon, index) => (
+            <motion.div
+              key={index}
+              className="relative flex flex-col items-center"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: index * 0.2 }}
+            >
+              {/* Floating Label */}
+              <motion.div
+                className="absolute -top-6 bg-white text-[#131313] text-xs font-semibold px-2 py-1 rounded-md shadow-md flex items-center"
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: labels[index].y }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
+              >
+                {labels[index].text}
+                <motion.div 
+                  className="w-2 h-2 bg-white rotate-45 absolute bottom-[-5px] left-1/2 transform -translate-x-1/2" 
+                />
+              </motion.div>
 
+              <Icon size={48} className="text-white opacity-80" />
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* Animated Title */}
         <TextMaskAnimation />
