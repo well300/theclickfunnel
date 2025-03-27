@@ -4,6 +4,9 @@ import Button from "../Reusable/Button.jsx";
 import { Shapes, Circle, ArrowRight, Sparkles, PenTool } from "lucide-react";
 import { useEffect, useState } from "react";
 import RotatingLabels from "./RotatingLabels.jsx";
+import heroImage from "../assets/Hero1.svg";
+import heroImage2 from "../assets/Hero2.svg";
+import heroImage3 from "../assets/Hero3.svg";
 
 const labels = [
   { text: "Marketers", color: "#0072F5", icon: <Sparkles size={16} /> },
@@ -32,18 +35,52 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative w-[90%] sm:w-[85%] md:w-[95%] max-w-8xl mx-auto flex flex-col gap-4 text-white z-10 mt-auto pb-6">
-        {/* Animated Title */}
-        <TextMaskAnimation />
+        
+        {/* Row containing Animated Title & Multiple Hero Images */}
+        <div className="flex justify-between items-end w-full">
+          {/* Animated Title */}
+          <TextMaskAnimation />
 
+          {/* Hero Images - Hidden on Mobile */}
+          <div className="hidden md:flex gap-4">
+            <motion.img
+              src={heroImage3}
+              alt="Hero Image 1"
+              className="w-32 h-32 object-contain"
+              initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{ duration: 1.0, ease: "easeOut" }}
+            />
+            <motion.img
+              src={heroImage}
+              alt="Hero Image 2"
+              className="w-32 h-32 object-contain"
+              initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{ duration: 1.2, ease: "easeOut" }}
+            />
+            <motion.img
+              src={heroImage2}
+              alt="Hero Image 3"
+              className="w-32 h-32 object-contain"
+              initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
+              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+              transition={{ duration: 1.4, ease: "easeOut" }}
+            />
+          </div>
+        </div>
 
         {/* Button & Supporting Text */}
         <div className="flex flex-col md:flex-row md:items-center mt-2 justify-between gap-6">
+          {/* Left Side: Join Button */}
           <Button
             to="/join"
             className="bg-white text-[#131313] hover:bg-[#131313] hover:text-white transition-all w-full md:w-auto"
             text="Join Community"
             icon={Shapes}
           />
+
+          {/* Right Side: Supporting Text */}
           <motion.p
             className="max-w-lg text-gray-300 text-lg text-left sm:text-center md:text-right"
             initial={{ opacity: 0, filter: "blur(10px)" }}
