@@ -21,12 +21,18 @@ const InfiniteScrollText = () => {
 
   return (
     <div className="relative w-full overflow-hidden bg-white rounded-t-4xl py-6 sm:py-10">
-      <div className="text-center mb-4 sm:mb-6 px-4">
-        <h2 className="text-lg sm:text-xl font-bold text-gray-800 leading-snug">
-          <div>Connecting 1M+ designers</div>
-          <div>from top companies worldwide</div>
-        </h2>
-      </div>
+     <motion.div
+  className="text-center mb-4 sm:mb-6 px-4"
+  initial={{ opacity: 0, filter: "blur(10px)" }}
+  animate={{ opacity: 1, filter: "blur(0px)" }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  <h2 className="text-lg sm:text-xl font-bold text-gray-800 leading-snug">
+    <div>Connecting 1M+ designers</div>
+    <div>from top companies worldwide</div>
+  </h2>
+</motion.div>
+
 
       <div className="relative h-[120px] sm:h-[140px] flex items-center">
         <motion.div
@@ -47,10 +53,16 @@ const InfiniteScrollText = () => {
               className="mx-4 sm:mx-6 flex flex-col items-center min-w-[95px] sm:min-w-[110px]"
             >
               {/* Apply color to icon dynamically */}
-              <Icon
-                className="w-12 h-12 sm:w-12 sm:h-12 transition-opacity hover:opacity-80"
-                style={{ color }} // Apply the dynamic color here
-              />
+              <motion.div
+  initial={{ opacity: 0, filter: "blur(10px)" }}
+  animate={{ opacity: 1, filter: "blur(0px)" }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  <Icon
+    className="w-12 h-12 sm:w-12 sm:h-12 transition-opacity hover:opacity-80"
+    style={{ color }} // Apply the dynamic color here
+  />
+</motion.div>
               <span className="mt-2 text-xs sm:text-sm text-gray-500 font-medium">{name}</span>
             </div>
           ))}

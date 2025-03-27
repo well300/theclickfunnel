@@ -14,7 +14,7 @@ const labels = [
 
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen flex flex-col items-center bg-[#131313] overflow-hidden px-4">
+    <section className="relative w-full h-[80vh] flex flex-col items-center bg-[#131313] overflow-hidden px-2">
       {/* Background Grid Overlay */}
       <div
         className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] 
