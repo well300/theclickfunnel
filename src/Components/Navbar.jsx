@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { Users, X, Menu, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import logo from "../assets/logo.svg";
+import Button from "../Reusable/Button";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +66,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
-            <div className="flex space-x-8">
+            <div className="flex space-x-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -84,13 +85,8 @@ const Navbar = () => {
 
           {/* Desktop CTA Button - Right */}
           <div className="hidden md:block">
-            <Link
-              to="/join"
-              className="flex items-center space-x-2 bg-[#131313] text-white px-5 py-2.5 rounded-lg hover:bg-gray-800 transition-colors duration-300 text-sm lg:text-base"
-            >
-              <Users size={18} />
-              <span>Join Community</span>
-            </Link>
+          <Button to="/join" className="bg-[#131313] text-white"  text="Join Community" icon={Users} />
+
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -130,13 +126,8 @@ const Navbar = () => {
             {link.name}
           </Link>
         ))}
-        <Link
-          to="/join"
-          className="mt-2 flex items-center justify-center space-x-2 bg-[#131313] text-white px-4 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-300"
-        >
-          <Users size={18} />
-          <span>Join Community</span>
-        </Link>
+          <Button to="/join" text="Join Community" className="bg-[#131313] text-white" icon={Users} />
+
 
         {/* Social Media Links */}
         <div className="flex justify-center space-x-4 mt-4">
