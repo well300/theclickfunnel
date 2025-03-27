@@ -4,16 +4,16 @@ import { FaMicrosoft } from "react-icons/fa";
 
 const InfiniteScrollText = () => {
   const companies = [
-    { icon: SiAdobe, name: "Adobe" },
-    { icon: SiFigma, name: "Figma" },
-    { icon: SiGoogle, name: "Google" },
-    { icon: FaMicrosoft, name: "Microsoft" },
-    { icon: SiApple, name: "Apple" },
-    { icon: SiAmazon, name: "Amazon" },
-    { icon: SiNetflix, name: "Netflix" },
-    { icon: SiSpotify, name: "Spotify" },
-    { icon: SiTesla, name: "Tesla" },
-    { icon: SiNike, name: "Nike" },
+    { icon: SiAdobe, name: "Adobe", color: "#FF0000" }, // Red
+    { icon: SiFigma, name: "Figma", color: "#0072F5" }, // Blue
+    { icon: SiGoogle, name: "Google", color: "#4285F4" }, // Google Blue
+    { icon: FaMicrosoft, name: "Microsoft", color: "#00A4EF" }, // Microsoft Blue
+    { icon: SiApple, name: "Apple", color: "#A2AAAD" }, // Apple Gray
+    { icon: SiAmazon, name: "Amazon", color: "#FF9900" }, // Amazon Orange
+    { icon: SiNetflix, name: "Netflix", color: "#E50914" }, // Netflix Red
+    { icon: SiSpotify, name: "Spotify", color: "#1DB954" }, // Spotify Green
+    { icon: SiTesla, name: "Tesla", color: "#E82127" }, // Tesla Red
+    { icon: SiNike, name: "Nike", color: "#111111" }, // Nike Black
   ];
 
   // Duplicate for seamless looping (3 sets for smoother transition)
@@ -27,7 +27,7 @@ const InfiniteScrollText = () => {
           <div>from top companies worldwide</div>
         </h2>
       </div>
-      
+
       <div className="relative h-[120px] sm:h-[140px] flex items-center">
         <motion.div
           className="flex whitespace-nowrap"
@@ -41,12 +41,16 @@ const InfiniteScrollText = () => {
             ease: "linear",
           }}
         >
-          {scrollingItems.map(({ icon: Icon, name }, index) => (
-            <div 
+          {scrollingItems.map(({ icon: Icon, name, color }, index) => (
+            <div
               key={`item-${index}`}
               className="mx-4 sm:mx-6 flex flex-col items-center min-w-[95px] sm:min-w-[110px]"
             >
-              <Icon className="text-[#131313] w-12 h-12 sm:w-12 sm:h-12 transition-opacity hover:opacity-80" />
+              {/* Apply color to icon dynamically */}
+              <Icon
+                className="w-12 h-12 sm:w-12 sm:h-12 transition-opacity hover:opacity-80"
+                style={{ color }} // Apply the dynamic color here
+              />
               <span className="mt-2 text-xs sm:text-sm text-gray-500 font-medium">{name}</span>
             </div>
           ))}

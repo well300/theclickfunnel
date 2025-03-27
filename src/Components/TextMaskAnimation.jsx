@@ -31,7 +31,7 @@ export default function TextMaskAnimation() {
       {phrases.map((phrase, index) => (
         <div key={index} className="overflow-hidden">
           <motion.p
-            className="text-3xl sm:text-4xl md:text-6xl font-bold max-w-4xl leading-tight text-left sm:text-center md:text-left text-white"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold max-w-4xl leading-tight text-left sm:text-center md:text-left text-white"
             custom={index}
             variants={animation}
             initial="initial"
