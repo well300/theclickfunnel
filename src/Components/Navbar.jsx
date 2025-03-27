@@ -44,7 +44,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] z-50 
+      className={`fixed top-6 left-1/2 transform -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] z-50 
       transition-all duration-300 rounded-2xl shadow-lg 
       ${isScrolled ? "bg-white/90 backdrop-blur-lg" : "bg-white"}`}
     >

@@ -8,11 +8,12 @@ const SmoothScrollWrapper = ({ children }) => {
   useEffect(() => {
     const lenis = new Lenis({
       smooth: true,
-      lerp: 0.1, // Adjust for smoothness
+      lerp: 0.05, // Smoothness factor, lower value makes it smoother and slower
     });
 
     const scrollFn = (time) => {
-      lenis.raf(time);
+      // Add a delay by adjusting the time parameter, this adds a delay to the scroll effect
+      lenis.raf(time + 100); // Adjust this 100 to add more delay (in milliseconds)
       requestAnimationFrame(scrollFn);
     };
 

@@ -15,12 +15,12 @@ function App() {
           <section id="home">
             <Home />
           </section>
-          <section id="about">
+          {/* <section id="about">
             <h1 className="text-2xl">About</h1>
           </section>
           <section id="contact">
             <h1 className="text-2xl">Contact</h1>
-          </section>
+          </section> */}
         </>
       )}
     </div>

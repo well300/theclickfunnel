@@ -21,7 +21,7 @@ const InfiniteScrollText = () => {
 
   return (
     <div className="relative w-full overflow-hidden bg-white rounded-t-4xl py-6 sm:py-10">
-      <div className="text-center mb-4 sm:mb-4 px-4">
+      <div className="text-center mb-4 sm:mb-6 px-4">
         <h2 className="text-lg sm:text-xl font-bold text-gray-800 leading-snug">
           <div>Connecting 1M+ designers</div>
           <div>from top companies worldwide</div>

@@ -3,5 +3,9 @@
 body {
   background-color: #131313;
   color: #FEFDFD;
-  /* min-height: 100vh;   */
+}
+
+::selection {
+  background-color: #131313;
+  color: white;
 }
