@@ -68,11 +68,11 @@ const Preloader = ({ onComplete }) => {
 
           {/* Large Text "Creative Madness" */}
           <motion.h1
-            className="absolute text-white uppercase font-bold leading-none tracking-tight"
+            className="hidden md:flex absolute text-white uppercase font-bold leading-none tracking-tight"
             style={{
-              fontSize: "12vw", // Adjusted for mobile
-              bottom: "-5%", // Visible on mobile
-              left: "-5%",
+              fontSize: "11vw", // Adjusted for mobile
+              bottom: "0%", // Visible on mobile
+              left: "0%",
               transform: "translateX(-50%)",
               whiteSpace: "nowrap",
             }}
