@@ -29,7 +29,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-[90vh] flex flex-col items-center bg-[#131313] overflow-hidden px-2">
+    <section className="relative w-full h-[86vh] flex flex-col items-center bg-[#131313] overflow-hidden px-2">
       {/* Background Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:20px_30px] [mask-image:radial-gradient(ellipse_100%_60%_at_50%_0%,#FEFDFD_80%,transparent_140%)]"></div>
 
@@ -42,36 +42,37 @@ const Hero = () => {
           <TextMaskAnimation />
 
           {/* Hero Images - Hidden on Mobile */}
-          <div className="hidden md:flex gap-4">
-            <motion.img
-              src={heroImage3}
-              alt="Hero Image 1"
-              className="w-32 h-32 object-contain"
-              initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
-              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-              transition={{ duration: 1.0, ease: "easeOut" }}
-            />
-            <motion.img
-              src={heroImage}
-              alt="Hero Image 2"
-              className="w-32 h-32 object-contain"
-              initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
-              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-              transition={{ duration: 1.2, ease: "easeOut" }}
-            />
-            <motion.img
-              src={heroImage2}
-              alt="Hero Image 3"
-              className="w-32 h-32 object-contain"
-              initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
-              animate={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-              transition={{ duration: 1.4, ease: "easeOut" }}
-            />
-          </div>
+<div className="hidden md:flex gap-3 ">
+  <motion.img
+    src={heroImage3}
+    alt="Hero Image 1"
+    className="w-28 h-28 object-contain"
+    initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
+    animate={{ opacity: 1, filter: "blur(0px)", y: [0, -15, 0] }}
+    transition={{ opacity: { duration: 1.5, ease: "easeOut" }, filter: { duration: 1.5 }, y: { duration: 3, ease: "easeInOut", repeat: Infinity } }}
+  />
+  <motion.img
+    src={heroImage}
+    alt="Hero Image 2"
+    className="w-28 h-28 object-contain"
+    initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
+    animate={{ opacity: 1, filter: "blur(0px)", y: [0, -10, 0] }}
+    transition={{ opacity: { duration: 1.5, ease: "easeOut" }, filter: { duration: 1.5 }, y: { duration: 3.2, ease: "easeInOut", repeat: Infinity } }}
+  />
+  <motion.img
+    src={heroImage2}
+    alt="Hero Image 3"
+    className="w-28 h-28 object-contain"
+    initial={{ opacity: 0, filter: "blur(15px)", y: -20 }}
+    animate={{ opacity: 1, filter: "blur(0px)", y: [0, -12, 0] }}
+    transition={{ opacity: { duration: 1.5, ease: "easeOut" }, filter: { duration: 1.5 }, y: { duration: 3.4, ease: "easeInOut", repeat: Infinity } }}
+  />
+</div>
+
         </div>
 
         {/* Button & Supporting Text */}
-        <div className="flex flex-col md:flex-row md:items-center mt-2 justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-center  justify-between gap-6">
           {/* Left Side: Join Button */}
           <Button
             to="/join"

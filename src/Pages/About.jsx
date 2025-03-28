@@ -89,7 +89,7 @@ const About = () => {
   transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
 >
   <img
-    src="https://i.pinimg.com/736x/4d/7d/4e/4d7d4e2bacc1a5de3a58cbea74419239.jpg"
+    src="https://i.pinimg.com/736x/d4/3c/14/d43c14f4cb9e2fec332d61738bfa3790.jpg"
     alt="Creative Madness"
     className="object-cover rounded-lg w-full h-full"
   />
