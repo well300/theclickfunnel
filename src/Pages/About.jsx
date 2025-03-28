@@ -16,12 +16,12 @@ const About = () => {
   });
 
   return (
-<section className="relative w-full min-h-screen flex flex-col items-center bg-white overflow-hidden px-2 py-16 sm:py-24">
-<div className="relative w-[90%] sm:w-[85%] md:w-[95%] max-w-8xl mx-auto flex flex-col lg:flex-row gap-12 items-center">
+<section className="relative w-full  flex flex-col items-center bg-white overflow-hidden px-2 py-8 sm:py-12">
+<div className="relative w-[90%] sm:w-[85%] md:w-[95%] max-w-8xl mx-auto flex flex-col lg:flex-row gap-12 items-center mb-6">
         {/* Text Content - Left Side */}
         <div className="lg:w-1/2">
           {/* About Span Section */}
-          <div className="text-left mb-6">
+          <div className="text-left mb-2">
             <motion.div
               ref={headingRef}
               initial={{ opacity: 0, filter: "blur(8px)" }}

@@ -42,7 +42,7 @@ const Hero = () => {
           <TextMaskAnimation />
 
           {/* Hero Images - Hidden on Mobile */}
-<div className="hidden md:flex gap-3 ">
+{/* <div className="hidden md:flex gap-3 ">
   <motion.img
     src={heroImage3}
     alt="Hero Image 1"
@@ -67,7 +67,7 @@ const Hero = () => {
     animate={{ opacity: 1, filter: "blur(0px)", y: [0, -12, 0] }}
     transition={{ opacity: { duration: 1.5, ease: "easeOut" }, filter: { duration: 1.5 }, y: { duration: 3.4, ease: "easeInOut", repeat: Infinity } }}
   />
-</div>
+</div> */}
 
         </div>
 
