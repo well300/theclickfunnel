@@ -28,7 +28,9 @@ function App() {
             <About />
           </section>
           <InfiniteScrollStrips />
-          <PastEvents />
+          <section id="past-events">
+            <PastEvents />
+          </section>
 
           <section id="challenges">
             <Challenges />
