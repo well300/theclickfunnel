@@ -4,25 +4,26 @@ import { useInView } from "react-intersection-observer";
 import Button from "../Reusable/Button.jsx";
 
 const challenges = [
-  {
-    title: "Rapid Redesign",
-    description: "Fix a bad UI in 5-10 minutes with a quick sketch or concept.",
-    color: "#FF5E5B", // Coral
-    pattern: "diagonal-stripes"
-  },
-  {
-    title: "Reverse Engineering UI",
-    description: "Given a final UI screen, participants rebuild the user flow or wireframe.",
-    color: "#00CECB", // Teal
-    pattern: "dots"
-  },
-  {
-    title: "The 60-Second Brand Identity",
-    description: "Create a logo, color scheme, and tagline for a random business in 60 seconds.",
-    color: "#FFED66", // Yellow
-    pattern: "zigzag"
-  },
-];
+    {
+      title: "Pixel Rescue",
+      description: "Revamp a poorly designed UI in just 10 minutes with a fresh concept.",
+      color: "#FF5E5B", // Coral
+      pattern: "diagonal-stripes"
+    },
+    {
+      title: "Brand Storm",
+      description: "Create a logo, color scheme, and tagline for a random business in 60 seconds.",
+      color: "#FFED66", // Yellow
+      pattern: "zigzag"
+    },
+    {
+      title: "Monochrome Masterpiece",
+      description: "Design a stunning UI using only shades of a single color.",
+      color: "#00CECB", // Teal
+      pattern: "dots"
+    }
+  ];
+  
 
 const CreativeMadnessChallenges = () => {
   const [headingRef, headingInView] = useInView({ triggerOnce: true, threshold: 0.3 });

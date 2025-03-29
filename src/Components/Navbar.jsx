@@ -71,7 +71,7 @@ const Navbar = () => {
                   duration={600} // Smooth scroll duration
                   spy={true}
                   offset={-80} // Adjust based on navbar height
-                  className={`px-2 py-1 font-medium transition-colors duration-300 text-sm lg:text-base cursor-pointer ${
+                  className={`px-2 py-1 font-medium transition-colors duration-300 text-sm lg:text-base  ${
                     activeSection === link.id 
                       ? "text-black font-semibold border-b-2 border-black" // Active section styling
                       : "text-gray-600 hover:text-black"
@@ -120,7 +120,7 @@ const Navbar = () => {
                       duration={600}
                       spy={true}
                       offset={-80}
-                      className={`py-3 px-4 rounded-lg transition-colors duration-300 font-medium text-center cursor-pointer ${
+                      className={`py-3 px-4 rounded-lg transition-colors duration-300 font-medium text-center  ${
                         activeSection === link.id
                           ? "bg-gray-100 text-black font-semibold "
                           : "text-gray-600 hover:bg-gray-50"

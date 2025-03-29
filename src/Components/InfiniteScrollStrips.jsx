@@ -31,10 +31,13 @@ const InfiniteScrollStrip = () => {
   const xTransform = useTransform(scrollYProgress, [0, 1], ["5%", "-100%"]);
 
   const messages = [
-    "Twitmad Growth is driven by innovation",
-    "Our strategies focus on delivering real results",
-    "Cutting-edge solutions elevate brands",
-    "Unlocking potential through smart strategies"
+    // creativemaddness is a communty for creative designers 
+    "Creativity is the essence of our community.",
+    "We are a community of creative designers.",
+    "We are a community of creative thinkers.",
+    "We are a community of creative minds.",
+    "We are a community of creative souls.",
+    "We are a community of creative spirits.",
   ];
 
   return (
