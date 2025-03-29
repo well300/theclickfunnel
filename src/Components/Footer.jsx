@@ -78,7 +78,7 @@ const Footer = () => {
           >
             <h4 className="text-lg font-semibold">Our Community</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Past Events', 'Challenges'].map((link, i) => (
+              {['Home', 'About', 'Challenges'].map((link, i) => (
                 <motion.li
                   key={link}
                   initial={{ opacity: 0 }}
