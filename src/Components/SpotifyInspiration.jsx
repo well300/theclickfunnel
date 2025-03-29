@@ -35,7 +35,7 @@ const SpotifyPlaylist = () => {
       category: "Marketers",
       playlists: [
         { id: "37i9dQZF1DX0vHZ8elq0UK", name: "Brainstorm Beats" },
-        { id: "37i9dQZF1DX4OjfOte3nQc", name: "Productivity Boost" },
+        { id: "37i9dQZF1DX4Wsb4d7NKfP", name: "Productivity Boost" },
         { id: "37i9dQZF1DX6aTaZa0K6VA", name: "Upbeat Office" }
       ]
     },
@@ -44,7 +44,7 @@ const SpotifyPlaylist = () => {
       playlists: [
         { id: "37i9dQZF1DX6VdMW310YC7", name: "Chill Vibes" },
         { id: "37i9dQZF1DX4sWSpwq3LiO", name: "Peaceful Piano" },
-        { id: "37i9dQZF1DWUZv12GM5cFk", name: "Narrative Waves" }
+        { id: "37i9dQZF1DX4o1oenSJRJd", name: "Narrative Waves" }
       ]
     },
     {
@@ -106,7 +106,7 @@ const SpotifyPlaylist = () => {
 
   return (
     <section className="relative w-full bg-gradient-to-b from-[#0a0a0a] to-black overflow-hidden px-4 py-12 sm:py-16">
-      <div className="max-w-[96%] mx-auto">
+      <div className=" mx-auto">
         {/* Category Selector */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -121,7 +121,7 @@ const SpotifyPlaylist = () => {
 </div>
 
           
-          <div className="flex flex-wrap justify-center gap-4 mb-6">
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
             {professionalPlaylists.map((category, index) => (
               <motion.button
                 key={category.category}
