@@ -16,7 +16,7 @@ const PastEvents = () => {
       audience: "Marketers",
       date: "November 8, 2024",
       description: "Advanced strategies for customer acquisition and retention in digital markets.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      image: "https://i.pinimg.com/originals/34/11/5f/34115f4391f47603a5381a9f484f4f73.gif"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ const PastEvents = () => {
       audience: "Design Thinkers",
       date: "September 14, 2024",
       description: "Human-centered design methodologies for solving complex problems.",
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      image: "https://i.pinimg.com/originals/e5/6f/a0/e56fa04f17efdd50330285330b82d3fc.gif"
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ const PastEvents = () => {
       audience: "UI/UX Designers",
       date: "July 22, 2024",
       description: "Deep dive into interaction design patterns and user research techniques.",
-      image: "https://images.unsplash.com/photo-1496171367470-9ed9a91ea931?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      image: "https://i.pinimg.com/originals/a4/5b/99/a45b9954220ee5801c17403e770cf823.gif"
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const PastEvents = () => {
       audience: "Content Creators",
       date: "May 5, 2025",
       description: "Storytelling frameworks and visual content strategies for digital platforms.",
-      image: "https://images.unsplash.com/photo-1579389083078-4e7018379f7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+      image: "https://i.pinimg.com/originals/d9/11/1b/d9111be911dd2f932a5242cf958d336e.gif"
     }
   ];
 
