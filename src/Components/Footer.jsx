@@ -57,7 +57,7 @@ const Footer = () => {
                   key={social.name}
                   href="#"
                   whileHover={{ y: -2 }}
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400  transition-colors"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: inView ? 1 : 0 }}
                   transition={{ duration: 0.3, delay: 0.3 + i * 0.1 }}
@@ -87,7 +87,7 @@ const Footer = () => {
                 >
                   <button
                     onClick={() => scrollToSection(link)}
-                    className="text-gray-400 hover:text-white transition-colors cursor-pointer w-full text-left"
+                    className="text-gray-400  transition-colors cursor-pointer w-full text-left"
                   >
                     {link}
                   </button>
@@ -120,7 +120,7 @@ const Footer = () => {
                     href={item.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    className="text-gray-400  transition-colors"
                   >
                     {item.name}
                   </a>
@@ -169,7 +169,7 @@ const Footer = () => {
              
               rel="noopener noreferrer"
             >
-              This Community is under <a rel="noopener noreferrer" className="hover:text-white transition-colors" href="https://twitmad.com" 
+              This Community is under <a rel="noopener noreferrer" className=" text-white transition-colors" href="https://twitmad.com" 
               target="_blank"  >Twitmad</a>
             </div>
           </div>
