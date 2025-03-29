@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Button from "../Reusable/Button.jsx";
 
-const CreativeCTA = () => {
+const GetInTouch = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.2,
@@ -15,7 +15,7 @@ const CreativeCTA = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.8 }}
-      className="w-full bg-[#131313] py-16"
+      className="w-full bg-[#131313] py-16 "
     >
       <div className="w-[90%] sm:w-[85%] md:w-[95%] max-w-8xl mx-auto">
         <motion.div
@@ -83,4 +83,4 @@ const CreativeCTA = () => {
   );
 };
 
-export default CreativeCTA;
+export default GetInTouch;

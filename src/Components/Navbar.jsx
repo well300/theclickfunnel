@@ -21,6 +21,7 @@ const Navbar = () => {
 
   // Scroll event listener to detect active section
   useEffect(() => {
+    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
 
