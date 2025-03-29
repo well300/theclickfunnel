@@ -12,8 +12,8 @@ const PastEvents = () => {
   const events = [
     {
       id: 1,
-      title: "Growth Marketing Summit",
-      audience: "Marketers",
+      title: "Marketing Summit Online",
+      audience: "Digital Marketers",
       date: "November 8, 2024",
       description: "Advanced strategies for customer acquisition and retention in digital markets.",
       image: "https://i.pinimg.com/originals/34/11/5f/34115f4391f47603a5381a9f484f4f73.gif"

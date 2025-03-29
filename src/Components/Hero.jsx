@@ -9,11 +9,13 @@ import RotatingLabels from "./RotatingLabels.jsx";
 // import heroImage3 from "../assets/Hero3.svg";
 
 const labels = [
-  { text: "Marketers", color: "#0072F5", icon: <Sparkles size={16} /> },
-  { text: "Growth Marketers", color: "#D24D57", icon: <ArrowRight size={16} /> },
+  { text: "Digital Marketers", color: "#0072F5", icon: <Sparkles size={16} /> },
+  { text: "Graphic Designers", color: "#D24D57", icon: <ArrowRight size={16} /> },
+  { text: "Creative Thinkers", color: "#FF3E00", icon: <Circle size={16} /> },
   { text: "Design Thinkers", color: "#FF8C00", icon: <PenTool size={16} /> },
-  { text: "Fashion Designers", color: "#22C55E", icon: <Circle size={16} /> },
+  { text: "Product Designers", color: "#22C55E", icon: <Circle size={16} /> },
   { text: "Product Managers", color: "#0A84FF", icon: <ArrowRight size={16} /> },
+  { text: "Growth Hackers", color: "#FF3E00", icon: <Sparkles size={16} /> },
   { text: "UI/UX Designers", color: "#FFD700", icon: <Sparkles size={16} /> },
   { text: "Content Creators", color: "#FF69B4", icon: <PenTool size={16} /> },
 ];

@@ -12,11 +12,11 @@ const Navbar = () => {
   
 
   const navLinks = [
-    { id: "home", name: "Home" },
+    // { id: "home", name: "Home" },
     { id: "about", name: "About" },
     { id: "past-events", name: "Events" },
     { id: "challenges", name: "Challenges" },
-    { id: "contact", name: "Contact" },
+    // { id: "contact", name: "Contact" },
   ];
 
   // Scroll event listener to detect active section

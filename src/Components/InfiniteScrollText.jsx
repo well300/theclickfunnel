@@ -28,8 +28,8 @@ const InfiniteScrollText = () => {
   transition={{ duration: 0.8, ease: "easeOut" }}
 >
   <h2 className="text-lg sm:text-xl font-bold text-gray-800 leading-snug">
-    <div>Connecting 1M+ designers</div>
-    <div>from top companies worldwide</div>
+    <div>Bringing together 1M+ designers</div>
+    <div>and marketers from top companies across the globe</div>
   </h2>
 </motion.div>
 

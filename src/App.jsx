@@ -21,9 +21,7 @@ function App() {
       {!loading && (
         <>
           <Navbar />
-          <section id="home">
-            <Home />
-          </section>
+          <Home />
          <section id="about">
             <About />
           </section>
@@ -35,11 +33,9 @@ function App() {
           <section id="challenges">
             <Challenges />
           </section>
-          
+        
           {/* <SpotifyInspiration /> */}
-          <section id="contact">
             <GetInTouch />
-          </section>
           <Footer />
         </>
       )}
