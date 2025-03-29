@@ -135,16 +135,18 @@ const Footer = () => {
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <iframe 
-              src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4o1oenSJRJd" 
-              width="100%" 
-              height="152" 
-              frameBorder="0" 
-              allow="encrypted-media" 
-              className="rounded-lg "
-              loading="lazy"
-              title="Spotify Playlist"
-            />
+<iframe 
+//   id="spotify-player"
+  src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4o1oenSJRJd" 
+  width="100%" 
+  height="152" 
+  frameBorder="0" 
+  allow="encrypted-media" 
+  className="rounded-lg"
+  loading="lazy"
+  title="Spotify Playlist"
+/>
+
           </motion.div>
         </div>
 

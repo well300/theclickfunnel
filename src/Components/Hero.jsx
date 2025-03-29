@@ -4,9 +4,9 @@ import Button from "../Reusable/Button.jsx";
 import { Shapes, Circle, ArrowRight, Sparkles, PenTool } from "lucide-react";
 import { useEffect, useState } from "react";
 import RotatingLabels from "./RotatingLabels.jsx";
-import heroImage from "../assets/Hero1.svg";
-import heroImage2 from "../assets/Hero2.svg";
-import heroImage3 from "../assets/Hero3.svg";
+// import heroImage from "../assets/Hero1.svg";
+// import heroImage2 from "../assets/Hero2.svg";
+// import heroImage3 from "../assets/Hero3.svg";
 
 const labels = [
   { text: "Marketers", color: "#0072F5", icon: <Sparkles size={16} /> },
