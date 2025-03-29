@@ -22,11 +22,11 @@ const challenges = [
       color: "#00CECB", // Teal
       pattern: "dots"
     }
-  ];
-  
+];
 
-const CreativeMadnessChallenges = () => {
+const Challenges = () => {
   const [headingRef, headingInView] = useInView({ triggerOnce: true, threshold: 0.3 });
+  const [cardsRef, cardsInView] = useInView({ triggerOnce: true, threshold: 0.2 });
 
   // Pattern components
   const Pattern = ({ type, color }) => {
@@ -95,20 +95,23 @@ const CreativeMadnessChallenges = () => {
         </div>
 
         {/* Right Side - Challenges */}
-        <motion.div
-          className="lg:w-1/2 grid gap-6"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: headingInView ? 1 : 0, x: headingInView ? 0 : 50 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-        >
+        <div ref={cardsRef} className="lg:w-1/2 grid gap-6">
           {challenges.map((challenge, index) => (
             <motion.div
               key={index}
               className="relative p-6 rounded-lg overflow-hidden transition-all duration-300"
               style={{ backgroundColor: challenge.color }}
-              initial={{ y: 20, opacity: 0 }}
-              animate={{ y: headingInView ? 0 : 20, opacity: headingInView ? 1 : 0 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+              initial={{ opacity: 0, filter: "blur(8px)", y: 20 }}
+              animate={{ 
+                opacity: cardsInView ? 1 : 0, 
+                filter: cardsInView ? "blur(0px)" : "blur(8px)",
+                y: cardsInView ? 0 : 20
+              }}
+              transition={{ 
+                duration: 0.8, 
+                delay: index * 0.15,
+                ease: "easeOut" 
+              }}
             >
               {/* Background pattern */}
               <Pattern type={challenge.pattern} color="#131313" />
@@ -123,10 +126,10 @@ const CreativeMadnessChallenges = () => {
               </div>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
 
-export default CreativeMadnessChallenges;
+export default Challenges;

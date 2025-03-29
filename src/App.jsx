@@ -33,6 +33,7 @@ function App() {
           <section id="challenges">
             <Challenges />
           </section>
+          
           {/* <SpotifyInspiration /> */}
           <section id="contact">
             <GetInTouch />
