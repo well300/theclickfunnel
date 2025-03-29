@@ -14,7 +14,6 @@ const PastEvents = () => {
     threshold: 0.2,
   });
 
-  // Event data categorized by audience
   const events = [
     {
       id: 1,
@@ -53,25 +52,30 @@ const PastEvents = () => {
   return (
     <section className="relative w-full flex flex-col items-center bg-white overflow-hidden px-2 py-8 sm:py-12">
       <div className="relative w-[90%] sm:w-[85%] md:w-[95%] max-w-8xl mx-auto">
-        {/* Title Section */}
+        
+        {/* Title Section with Blur Effect */}
         <div className="text-left mb-8 sm:mb-12" ref={titleRef}>
           <motion.div
-            initial={{ opacity: 0, filter: "blur(8px)" }}
+            initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{
               opacity: titleInView ? 1 : 0,
-              filter: titleInView ? "blur(0px)" : "blur(8px)",
+              filter: titleInView ? "blur(0px)" : "blur(10px)",
             }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <span className="text-sm font-semibold text-[#131313] uppercase inline-block text-left sm:text-center md:text-left leading-none border border-gray-400 px-3 py-1 rounded-md">
+            <span className="text-sm font-semibold text-[#131313] uppercase inline-block border border-gray-400 px-3 py-1 rounded-md">
               Community Events
             </span>
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#131313] pt-4">
               Past Events
             </h2>
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: titleInView ? 1 : 0, y: titleInView ? 0 : 20 }}
+              initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+              animate={{
+                opacity: titleInView ? 1 : 0,
+                y: titleInView ? 0 : 20,
+                filter: titleInView ? "blur(0px)" : "blur(10px)",
+              }}
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               className="text-md sm:text-lg text-gray-700 mt-4 max-w-3xl"
             >
@@ -81,22 +85,20 @@ const PastEvents = () => {
           </motion.div>
         </div>
 
-        {/* Events Grid */}
-        <div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          ref={cardsRef}
-        >
+        {/* Events Grid with Blur Effect */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" ref={cardsRef}>
           {events.map((event, index) => (
             <motion.div
               key={event.id}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 30, filter: "blur(12px)" }}
               animate={{ 
                 opacity: cardsInView ? 1 : 0, 
-                y: cardsInView ? 0 : 30 
+                y: cardsInView ? 0 : 30,
+                filter: cardsInView ? "blur(0px)" : "blur(12px)",
               }}
               transition={{ 
                 duration: 0.6, 
-                delay: index * 0.1,
+                delay: index * 0.15,
                 ease: "easeOut" 
               }}
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100 flex flex-col"
@@ -116,31 +118,9 @@ const PastEvents = () => {
                 <p className="text-sm text-gray-500 mb-3">{event.date}</p>
                 <p className="text-gray-700 mb-4">{event.description}</p>
               </div>
-              {/* <div className="px-6 pb-6">
-                <Button
-                  to={`/events/${event.id}`}
-                  className="border border-[#131313] text-[#131313] hover:bg-[#131313] hover:text-white transition-all w-full"
-                  text="View Recap"
-                  small
-                />
-              </div> */}
             </motion.div>
           ))}
         </div>
-
-        {/* View All Button */}
-        {/* <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: cardsInView ? 1 : 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex justify-center mt-12"
-        >
-          <Button
-            to="/events"
-            className="bg-[#131313] text-white hover:text-white transition-all"
-            text="View All Events"
-          />
-        </motion.div> */}
       </div>
     </section>
   );
