@@ -234,10 +234,6 @@ const SpotifyPlaylist = () => {
           </div>
         </motion.div>
 
-        {/* Hidden Spotify Branding */}
-        <div className="opacity-0 h-0 overflow-hidden">
-          Music provided by Spotify
-        </div>
       </div>
     </section>
   );
