@@ -88,7 +88,9 @@ const Navbar = () => {
 
           {/* Desktop CTA Button - Right */}
           <div className="hidden md:block">
-            <Button to="/" className="bg-[#131313] text-white" text="Join Community" icon={Users} />
+            <Button 
+            to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
+             target="_blank" className="bg-[#131313] text-white" text="Join Community" icon={Users} />
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -134,7 +136,7 @@ const Navbar = () => {
                     </Link>
                   ))}
 
-                  <Button to="/" text="Join Community" className="bg-[#131313] text-white" icon={Users} />
+                  <Button to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header" text="Join Community" className="bg-[#131313] text-white" icon={Users} />
 
                   {/* Social Media Links */}
                   <div className="flex justify-center space-x-4 mt-4">

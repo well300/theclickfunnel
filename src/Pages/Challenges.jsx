@@ -84,7 +84,7 @@ const Challenges = () => {
             Unleash your creativity like never before with these fast, high-energy design challenges. Push your limits, think outside the box, and create something incredible in just minutes. Whether you're redesigning a bad UI, reverse-engineering a user flow, or building a brand in 60 seconds, each challenge will test your skills and fuel your creative genius. Get ready to innovate, experiment, and bring bold ideas to life!</p>
           </motion.div>
           <Button 
-            to="/join-challenges" 
+to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
             className="bg-[#131313] text-white hover:text-white hover:bg-opacity-90 transition-all mt-6 group"
             text={
               <span className="flex items-center">

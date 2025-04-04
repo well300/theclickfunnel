@@ -77,7 +77,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row md:items-center  justify-between gap-6">
           {/* Left Side: Join Button */}
           <Button
-            to="/join"
+            to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
             className="bg-white text-[#131313] hover:bg-[#131313] hover:text-white transition-all w-full md:w-auto"
             text="Join Community"
             icon={Shapes}

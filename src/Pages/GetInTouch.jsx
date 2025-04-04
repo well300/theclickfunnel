@@ -51,12 +51,12 @@ const GetInTouch = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button
-                to="/join"
+to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
                 className="bg-[#131313] text-white hover:bg-black transition-all"
                 text="Join Us Today"
               />
           <Button
-  to="/contact"
+  to="https://twitmad.com/"
   className="border border-[#131313] text-[#131313] bg-transparent hover:bg-[#131313] hover:text-white transition-all"
   text="Learn More"
 />

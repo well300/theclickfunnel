@@ -74,7 +74,7 @@ const About = () => {
             </motion.div>
 
             <Button
-              to="/join"
+to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
               className="bg-[#131313] text-white hover:text-white transition-all w-full md:w-auto mt-6"
               text="Join Community"
             />
