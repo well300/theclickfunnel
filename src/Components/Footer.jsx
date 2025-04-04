@@ -48,14 +48,14 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               {[
-                { icon: <Twitter size={20} />, name: 'twitter' },
-                { icon: <Instagram size={20} />, name: 'instagram' },
-                { icon: <Linkedin size={20} />, name: 'linkedin' },
-                { icon: <Dribbble size={20} />, name: 'dribbble' }
+                { icon: <Instagram size={20} />, name: 'instagram', url: 'https://instagram.com/creativemadness.club' },
+                { icon: <Linkedin size={20} />, name: 'linkedin', url: 'https://linkedin.com/company/creativemadness' },
               ].map((social, i) => (
                 <motion.a
                   key={social.name}
-                  href="#"
+                  href={social.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
                   className="text-gray-400  transition-colors"
                   initial={{ opacity: 0 }}
