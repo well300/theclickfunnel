@@ -171,7 +171,7 @@ const Footer = () => {
              
               rel="noopener noreferrer"
             >
-              This Community is under <a rel="noopener noreferrer" className=" text-white transition-colors" href="https://twitmad.com" 
+              This community collaborates with <a rel="noopener noreferrer" className=" text-white transition-colors" href="https://twitmad.com" 
               target="_blank"  >Twitmad</a>
             </div>
           </div>
