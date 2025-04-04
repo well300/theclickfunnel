@@ -1,13 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./public/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Creative Madness</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Creative Madness - The Ultimate Creative Community">
+    <meta name="description" content="Join Creative Madness – A top-tier community for designers, marketers, and creatives. Learn, collaborate, and grow with industry leaders.">
+    <meta name="keywords" content="Creative Community, UI/UX Design, Digital Marketing, Product Strategy, Growth Hacking, Graphic Design, Branding, Content Creation">
+    <meta name="author" content="Creative Madness">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://creativemadness.com/">
+
+    <link rel="icon" type="image/svg+xml" href="/public/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon.svg">
+    <link rel="icon" sizes="192x192" href="/public/favicon.svg">
+    <link rel="icon" sizes="512x512" href="/public/favicon.svg">
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Creative Madness – The Leading Community for Designers & Marketers" />
+    <meta property="og:description" content="Join Creative Madness – A top-tier community for designers, marketers, and creatives. Learn, collaborate, and grow." />
+    <meta property="og:url" content="https://creativemadness.com/" />
+    <meta property="og:image" content="https://creativemadness.com/public/socialbanner.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Creative Madness" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Creative Madness – The Leading Community for Designers & Marketers" />
+    <meta name="twitter:description" content="Join the fastest-growing creative and marketing community today." />
+    <meta name="twitter:image" content="https://creativemadness.com/public/socialbanner.svg" />
+    <meta name="twitter:site" content="@creativemadness" />
+
+    <meta property="og:image:type" content="image/svg+xml" />
+    <meta property="og:image:secure_url" content="https://creativemadness.com/public/socialbanner.svg" />
+    <meta property="og:image:alt" content="Creative Madness - The Ultimate Creative Community" />
+
+    <link rel="manifest" href="/public/manifest.json">
+    <link rel="sitemap" type="application/xml" href="/public/sitemap.xml">
+    <link rel="browserconfig" href="/public/browserconfig.xml">
+    <link rel="security" href="/public/security.txt">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Creative Madness",
+      "url": "https://creativemadness.com/",
+      "logo": "https://creativemadness.com/public/favicon.svg",
+      "description": "Creative Madness is a leading community for designers, marketers, and creatives to collaborate and grow.",
+      "sameAs": [
+        "https://twitter.com/creativemadness",
+        "https://www.instagram.com/creativemadness",
+        "https://www.linkedin.com/company/creativemadness",
+        "https://www.pinterest.com/creativemadness",
+        "https://www.tiktok.com/@creativemadness"
+      ]
+    }
+    </script>
+
+    <title>Creative Madness - The Ultimate Creative Community</title>
+</head>
+<body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-  </body>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/public/service-worker.js')
+            .then(reg => console.log('Service Worker Registered', reg))
+            .catch(err => console.log('Service Worker Registration Failed', err));
+        }
+    </script>
+</body>
 </html>
