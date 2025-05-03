@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { SiAdobe, SiFigma, SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiSketch } from "react-icons/si";
+import { Laptop, FileText, BarChart2, User, TrendingUp, Target } from "lucide-react";
 
-const icons = [SiAdobe, SiFigma, SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign, SiSketch];
+const icons = [Laptop, FileText, BarChart2, User, TrendingUp, Target];
 
 const Preloader = ({ onComplete }) => {
   const [index, setIndex] = useState(0);
@@ -38,7 +38,7 @@ const Preloader = ({ onComplete }) => {
     <AnimatePresence>
       {isLoading && (
         <motion.div
-          className="fixed inset-0 bg-[#131313] flex flex-col items-center justify-center overflow-hidden"
+          className="fixed inset-0 bg-black flex flex-col items-center justify-center overflow-hidden"
           initial={{ opacity: 1 }}
           animate={{ opacity: isFadingOut ? 0 : 1 }}
           exit={{ opacity: 0 }}
@@ -66,11 +66,11 @@ const Preloader = ({ onComplete }) => {
             }}
           />
 
-          {/* Large Text "Creative Madness" */}
+          {/* Large Text "The Click Funnel" */}
           <motion.h1
             className="hidden md:flex absolute text-white uppercase font-bold leading-none tracking-tight"
             style={{
-              fontSize: "11vw", // Adjusted for mobile
+              fontSize: "11.6vw", // Adjusted for mobile
               bottom: "0%", // Visible on mobile
               left: "0%",
               transform: "translateX(-50%)",
@@ -80,7 +80,7 @@ const Preloader = ({ onComplete }) => {
             animate={{ y: isFadingOut ? "100%" : "0%" }} // Moves down on fade-out
             transition={{ duration: 1, ease: "easeInOut" }}
           >
-            CreativeMadness
+            The Click Funnel
           </motion.h1>
         </motion.div>
       )}

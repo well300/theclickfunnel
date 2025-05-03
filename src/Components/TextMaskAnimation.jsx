@@ -2,10 +2,9 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 
 const phrases = [
-  "Built for bold minds",
-  "across UI/UX design,",
-  "product strategy, marketing,",
-  "and growth."
+  "Professional designs",
+  "for impactful presentations",
+  "that connect.",
 ];
 
 export default function TextMaskAnimation() {
@@ -31,7 +30,7 @@ export default function TextMaskAnimation() {
       {phrases.map((phrase, index) => (
         <div key={index} className="overflow-hidden">
           <motion.p
-            className="text-3xl sm:text-4xl md:text-5xl font-bold max-w-4xl leading-tight text-left sm:text-center md:text-left text-white"
+            className="text-5xl sm:text-4xl md:text-5xl font-bold max-w-4xl leading-none text-left sm:text-left md:text-left text-white"
             custom={index}
             variants={animation}
             initial="initial"

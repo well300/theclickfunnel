@@ -1,3 +1,0 @@
-Contact: mailto:support@creativemadness.club
-Encryption: https://creativemadness.club/pgp-key.txt
-Policy: https://creativemadness.club/security-policy

@@ -1,8 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Twitter, Instagram, Linkedin, Dribbble } from "lucide-react";
-import logo from "../assets/FullWhiteLogo.svg";
+import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import logo from "../assets/whitelogo.png"; 
+import Button from "../Reusable/Button";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   const [ref, inView] = useInView({
@@ -10,9 +12,8 @@ const Footer = () => {
     threshold: 0.2,
   });
 
-  // Function to handle smooth scrolling
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id.toLowerCase().replace(' ', '-'));
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -24,11 +25,12 @@ const Footer = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 20 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="w-full bg-[#131313] text-white py-12 px-4 sm:px-6 lg:px-8"
+      className="w-full bg-black text-white py-12 px-4 sm:px-6 lg:px-8"
+      id="contact"
     >
       <div className="max-w-8xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
           {/* Brand Column */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -39,17 +41,19 @@ const Footer = () => {
             <div className="flex items-center">
               <img 
                 src={logo} 
-                alt="Twitmad Logo" 
+                alt="Click Funnel Logo" 
                 className="h-12 mr-2"
               />
             </div>
             <p className="text-gray-400">
-              Redefining what's possible in design, technology, and creativity.
+              Crafting powerful presentations that convert and captivate investors.
             </p>
             <div className="flex space-x-4">
               {[
-                { icon: <Instagram size={20} />, name: 'instagram', url: 'https://instagram.com/creativemadness.club' },
-                { icon: <Linkedin size={20} />, name: 'linkedin', url: 'https://linkedin.com/company/creativemadness' },
+                { icon: <Facebook size={20} />, name: 'facebook', url: 'https://facebook.com' },
+                { icon: <Twitter size={20} />, name: 'twitter', url: 'https://twitter.com' },
+                { icon: <Instagram size={20} />, name: 'instagram', url: 'https://instagram.com' },
+                { icon: <Linkedin size={20} />, name: 'linkedin', url: 'https://linkedin.com' },
               ].map((social, i) => (
                 <motion.a
                   key={social.name}
@@ -57,7 +61,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ y: -2 }}
-                  className="text-gray-400  transition-colors"
+                  className="text-gray-400 hover:text-white transition-colors"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: inView ? 1 : 0 }}
                   transition={{ duration: 0.3, delay: 0.3 + i * 0.1 }}
@@ -69,84 +73,94 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Our Community */}
+          {/* Quick Links */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-4"
           >
-            <h4 className="text-lg font-semibold">Our Community</h4>
+            <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Challenges'].map((link, i) => (
+              {[
+                { id: "about", name: "About" },
+                { id: "services", name: "Services" },
+                { id: "casestudies", name: "Case Studies" },
+                { id: "industries", name: "Industries" }
+              ].map((link, i) => (
                 <motion.li
-                  key={link}
+                  key={link.id}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: inView ? 1 : 0 }}
                   transition={{ duration: 0.3, delay: 0.4 + i * 0.1 }}
                 >
-                  <button
-                    onClick={() => scrollToSection(link)}
-                    className="text-gray-400  transition-colors cursor-pointer w-full text-left"
+                  <Link
+                    to={link.id}
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-gray-400 hover:text-white transition-colors cursor-pointer w-full text-left block"
                   >
-                    {link}
-                  </button>
+                    {link.name}
+                  </Link>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Quick Links */}
+          {/* Services */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className="space-y-4"
           >
-            <h4 className="text-lg font-semibold">Quick Links</h4>
+            <h4 className="text-lg font-semibold">Our Services</h4>
             <ul className="space-y-2">
               {[
-                { name: 'AI-Driven Growth Engine', url: 'https://twitmad.com' },
-                { name: 'HyperROI Paid Advertising', url: 'https://twitmad.com' },
-                { name: 'Disruptive Growth Lab', url: 'https://twitmad.com' }
+                { id: "services", name: 'Pitch Deck Design' },
+                { id: "services", name: 'Fund Raising' },
+                { id: "services", name: 'Business Plans' },
+                { id: "services", name: 'Investor Decks' }
               ].map((item, i) => (
                 <motion.li
-                  key={item.name}
+                  key={i}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: inView ? 1 : 0 }}
                   transition={{ duration: 0.3, delay: 0.5 + i * 0.1 }}
                 >
-                  <a
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-gray-400  transition-colors"
+                  <Link
+                    to={item.id}
+                    smooth={true}
+                    duration={500}
+                    offset={-80}
+                    className="text-gray-400 hover:text-white transition-colors cursor-pointer w-full text-left block"
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </motion.li>
               ))}
             </ul>
           </motion.div>
 
-          {/* Spotify Embed */}
+          {/* SoundCloud Player */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : -20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="space-y-4"
           >
-<iframe 
-//   id="spotify-player"
-  src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4o1oenSJRJd" 
-  width="100%" 
-  height="152" 
-  frameBorder="0" 
-  allow="encrypted-media" 
-  className="rounded-lg"
-  loading="lazy"
-  title="Spotify Playlist"
-/>
-
+            <h4 className="text-lg font-semibold">Our Vibes</h4>
+            <iframe 
+              width="100%" 
+              height="166" 
+              scrolling="no" 
+              frameBorder="no" 
+              allow="autoplay"
+              src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              className="rounded-lg"
+              title="SoundCloud Player"
+            ></iframe>
           </motion.div>
         </div>
 
@@ -163,18 +177,17 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: inView ? 1 : 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm"
+          className="flex flex-col items-center text-gray-500 text-sm"
         >
-          <p>© {new Date().getFullYear()} Creative Madness. All rights reserved.</p>
-          <div className="mt-4 md:mt-0">
-            <div
-             
-              rel="noopener noreferrer"
-            >
-              This community collaborates with <a rel="noopener noreferrer" className=" text-white transition-colors" href="https://twitmad.com" 
-              target="_blank"  >Twitmad</a>
-            </div>
-          </div>
+          <p>© 2025 <a 
+                className="text-white hover:text-gray-300 transition-colors" 
+                href="https://exsovert.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Exsovert
+              </a>. All rights reserved.</p>
+    
         </motion.div>
       </div>
     </motion.footer>

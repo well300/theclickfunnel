@@ -15,7 +15,8 @@ const GetInTouch = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.8 }}
-      className="w-full bg-[#131313] py-16 "
+      className="w-full bg-black py-16"
+      id="contact"  // Added for navbar navigation
     >
       <div className="w-[90%] sm:w-[85%] md:w-[95%] max-w-8xl mx-auto">
         <motion.div
@@ -31,15 +32,15 @@ const GetInTouch = () => {
               animate={{ opacity: inView ? 1 : 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <span className="text-sm font-semibold text-[#131313] uppercase inline-block leading-none border border-gray-400 px-3 py-1 rounded-md mb-4">
-                Join Our Community
+              <span className="text-sm font-semibold text-black uppercase inline-block leading-none border border-gray-400 px-3 py-1 rounded-md mb-4">
+                Ready to Elevate Your Pitch
               </span>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#131313] mb-4">
-                <span className="block">Tell us about your Creativity</span>
-                <span className="block">Let's Enjoy together</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-black mb-4">
+                <span className="block">Investor-Ready Presentations</span>
+                <span className="block">Crafted for Your Success</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Become part of our growing community of creators and innovators.
+                Let our expert team transform your business story into a compelling pitch that attracts investors and accelerates growth.
               </p>
             </motion.div>
 
@@ -51,20 +52,19 @@ const GetInTouch = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button
-to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
-                className="bg-[#131313] text-white hover:bg-black transition-all"
-                text="Join Us Today"
+                to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
+                className="bg-black text-white hover:bg-black transition-all"
+                text="Get Started Now"
               />
-          <Button
-  to="https://twitmad.com/"
-  className="border border-[#131313] text-[#131313] bg-transparent hover:bg-[#131313] hover:text-white transition-all"
-  text="Learn More"
-/>
-
+              <Button
+                to="https://theclickfunnel.com/"  // Linking to services section
+                className="border border-black text-black bg-transparent hover:bg-black hover:text-white transition-all"
+                text="The Click Funnel"
+              />
             </motion.div>
           </div>
 
-          {/* Right Side - Image (Takes up more space) */}
+          {/* Right Side - Professional Image */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: inView ? 1 : 0, x: inView ? 0 : 20 }}
@@ -72,9 +72,9 @@ to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSe
             className="w-full lg:w-[50%] mt-8 lg:mt-0 lg:ml-auto flex justify-end"
           >
             <img
-              src="https://i.pinimg.com/736x/7c/41/59/7c41599b40487cdcd8ae983ee85e1085.jpg"
-              alt="Creative Community"
-              className="w-full max-h-[300px] object-cover rounded-xl shadow-lg"
+              src="https://i.pinimg.com/736x/bf/f3/ea/bff3ea20260de5e1b2a094f58031e3e8.jpg"
+              alt="Professional pitch deck presentation"
+              className="w-full h-100 object-cover rounded-xl shadow-lg"
             />
           </motion.div>
         </motion.div>

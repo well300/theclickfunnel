@@ -27,13 +27,13 @@ const RotatingLabels = ({ labels }) => {
     <div className="mt-2 w-full overflow-hidden relative">
       {/* Enhanced gradient overlays with subtle pulsing */}
       <motion.div 
-        className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#131313] via-[#131313] to-transparent z-10"
+        className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black via-black to-transparent z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       />
       <motion.div 
-        className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#131313] via-[#131313] to-transparent z-10"
+        className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black via-black to-transparent z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
