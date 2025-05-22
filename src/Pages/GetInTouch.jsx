@@ -52,7 +52,7 @@ const GetInTouch = () => {
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Button
-                to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
+                to="https://cal.com/theclickfunnel-company-lsgeoq"
                 className="bg-black text-white hover:bg-black transition-all"
                 text="Get Started Now"
               />
@@ -72,7 +72,7 @@ const GetInTouch = () => {
             className="w-full lg:w-[50%] mt-8 lg:mt-0 lg:ml-auto flex justify-end"
           >
             <img
-              src="https://i.pinimg.com/736x/bf/f3/ea/bff3ea20260de5e1b2a094f58031e3e8.jpg"
+              src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Professional pitch deck presentation"
               className="w-full h-100 object-cover rounded-xl shadow-lg"
             />

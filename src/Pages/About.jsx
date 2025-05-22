@@ -19,7 +19,7 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
         >
           <img
-            src="https://i.pinimg.com/736x/2c/67/e9/2c67e9610acf7405bf236d52be807605.jpg"
+            src="https://images.unsplash.com/photo-1642957323739-5632d8a2ff3d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Click Funnel About"
             className="object-cover rounded-lg w-full h-full"
           />
@@ -51,7 +51,7 @@ const About = () => {
               transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
               className="text-md sm:text-lg text-gray-700 mt-2"
             >
-              Click Funnel transforms startup ideas and business strategies into stunning visual
+              The Click Funnel transforms startup ideas and business strategies into stunning visual
               pitch decks that drive investor interest and secure deals. We're not just designers—we're
               storytellers, strategists, and presentation experts.
             </motion.p>
@@ -81,7 +81,7 @@ const About = () => {
             </motion.div>
 
             <Button
-              to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
+              to="https://cal.com/theclickfunnel-company-lsgeoq"
               className="bg-black text-white hover:text-white transition-all w-full md:w-auto mt-6"
               text="Let’s Talk"
             />

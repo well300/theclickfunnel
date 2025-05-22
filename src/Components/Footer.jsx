@@ -50,10 +50,9 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               {[
-                { icon: <Facebook size={20} />, name: 'facebook', url: 'https://facebook.com' },
-                { icon: <Twitter size={20} />, name: 'twitter', url: 'https://twitter.com' },
-                { icon: <Instagram size={20} />, name: 'instagram', url: 'https://instagram.com' },
-                { icon: <Linkedin size={20} />, name: 'linkedin', url: 'https://linkedin.com' },
+                { icon: <Facebook size={20} />, name: 'facebook', url: 'https://www.facebook.com/people/The-click-funnel/100063771295305/#' },
+                { icon: <Instagram size={20} />, name: 'instagram', url: 'https://www.instagram.com/theclickfunnel/' },
+                { icon: <Linkedin size={20} />, name: 'linkedin', url: 'https://www.linkedin.com/company/theclickfunnel/' },
               ].map((social, i) => (
                 <motion.a
                   key={social.name}

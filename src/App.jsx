@@ -1,8 +1,10 @@
 import { useState } from "react";
 import Navbar from "./Components/Navbar";
 import Home from "./Pages/Home";
+import Clients from "./Components/Clients";
 import About from "./Pages/About";
 import CaseStudies from "./Pages/CaseStudies";
+import Process from "./Components/ProcessSection";
 import Services from "./Pages/Services";
 import GetInTouch from "./Pages/GetInTouch";
 import Footer from "./Components/Footer";
@@ -25,20 +27,22 @@ function App() {
           <section id="/">
           <Home />
           </section>
-
+          <Clients />
          <section id="about">
             <About />
           </section>
 
           <InfiniteScrollStrips />
+                    
+          <Process />
           <section id="services">
             <Services />
           </section>
 
 
-          <section id="casestudies">
+          {/* <section id="casestudies">
             <CaseStudies />
-          </section>
+          </section> */}
 
           <section id="industries">
           <IndustriesServed />

@@ -146,7 +146,7 @@ const Navbar = () => {
                   ))}
 
                   <Button
-                    to="https://docs.google.com/forms/d/e/1FAIpQLSfhJFAPimcXXMIBclKNzmY7BYF87KNVBbSenjB9xIbY41eU2w/viewform?usp=header"
+                    to="https://cal.com/theclickfunnel-company-lsgeoq"
                     text="Get In Touch"
                     className="bg-black text-white"
                     icon={Users}
@@ -155,7 +155,7 @@ const Navbar = () => {
                   {/* Social Media Links */}
                   <div className="flex justify-center space-x-4 mt-4">
                     <a
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/people/The-click-funnel/100063771295305/#"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
@@ -163,15 +163,7 @@ const Navbar = () => {
                       <Facebook size={20} />
                     </a>
                     <a
-                      href="https://twitter.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-blue-400 transition-colors duration-300"
-                    >
-                      <Twitter size={20} />
-                    </a>
-                    <a
-                      href="https://instagram.com"
+                      href="https://www.instagram.com/theclickfunnel/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-pink-500 transition-colors duration-300"
@@ -179,7 +171,7 @@ const Navbar = () => {
                       <Instagram size={20} />
                     </a>
                     <a
-                      href="https://linkedin.com"
+                      href="https://www.linkedin.com/company/theclickfunnel/"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-gray-600 hover:text-blue-700 transition-colors duration-300"

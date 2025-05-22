@@ -13,37 +13,37 @@ const Services = () => {
       id: 1,
       title: "Pitch Deck",
       description: "Custom made, graphically designed PowerPoint presentations that help you communicate your story effectively to investors and stakeholders.",
-      image: "https://i.pinimg.com/originals/ed/25/80/ed258098eb4bd0a0a3a71beefe831a79.gif"
+      image: "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 2,
       title: "Fund Raising",
       description: "We assist in raising funds from Angels, VC Funds, HNIs, Banks, and NBFCs, helping your business secure the capital it needs to grow.",
-      image: "https://i.pinimg.com/originals/9e/a9/f7/9ea9f7eb24b0c4163fe09b958fbb94b9.gif"
+      image: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 3,
       title: "Business Plan",
       description: "A comprehensive 25-50 page business strategy document that outlines your roadmap, goals, and plans for success.",
-      image: "https://i.pinimg.com/originals/7d/bf/a0/7dbfa054da84a4100078cc5686bc19aa.gif"
+      image: "https://images.unsplash.com/photo-1557425529-b1ae9c141e7d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 4,
       title: "Startup Deals",
       description: "Access lucrative startup deals with top-quality service providers to help you get your business off the ground.",
-      image: "https://i.pinimg.com/originals/c0/f4/a3/c0f4a326ef481f8e6f71b2b42971f544.gif"
+      image: "https://plus.unsplash.com/premium_photo-1676581945288-d06d739ec99e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 5,
       title: "Teaser/ Video Pitch",
       description: "A powerful 1-page teaser and 1-3 minute video pitch to capture the attention of investors and clients.",
-      image: "https://i.pinimg.com/originals/90/0a/3a/900a3a8784a3191f521bb85d30401c4c.gif"
+      image: "https://images.unsplash.com/photo-1558402955-dabff43cb9c0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       id: 6,
       title: "Experts on Demand",
       description: "Get access to industry experts such as fund-raising professionals, CTOs, CFOs, and CMOs, who can guide you at any stage of your business.",
-      image: "https://i.pinimg.com/originals/e4/de/c8/e4dec873ae16ccd9cb979bf73a596c4a.gif"
+      image: "https://images.unsplash.com/photo-1558402989-4778474384c9?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ];
 

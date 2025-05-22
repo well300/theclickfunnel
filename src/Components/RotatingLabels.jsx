@@ -27,13 +27,13 @@ const RotatingLabels = ({ labels }) => {
     <div className="mt-2 w-full overflow-hidden relative">
       {/* Enhanced gradient overlays with subtle pulsing */}
       <motion.div 
-        className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black via-black to-transparent z-10"
+        className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-black via-black to-transparent z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
       />
       <motion.div 
-        className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black via-black to-transparent z-10"
+        className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-black via-black to-transparent z-10"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.2 }}
@@ -60,13 +60,7 @@ const RotatingLabels = ({ labels }) => {
             <motion.div
               key={`${label.text}-${index}`}
               className="flex items-center group mx-2"
-              whileHover="hover"
-              initial={{ scale: 0.95, opacity: 0 }}
-              animate={{ 
-                scale: 1, 
-                opacity: 1,
-                transition: { delay: index * 0.03 }
-              }}
+           
               variants={{
                 hover: {
                   scale: 1.05,
